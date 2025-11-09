@@ -1,0 +1,65 @@
+/* 🌀 Base Container */
+.landing-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0a001f 0%, #000 100%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🎯 Content Styling */
+.landing-content {
+  z-index: 10;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.landing-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(132, 0, 255, 0.8);
+}
+
+.landing-subtitle {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* ✨ Button Styling */
+.enter-btn {
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  border: none;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(127, 0, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(225, 0, 255, 0.8);
+}
+
+/* 🌈 Fade Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

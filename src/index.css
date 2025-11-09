@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ Optional global customization */
+body {
+  @apply bg-gradient-to-b from-indigo-50 via-white to-indigo-100 text-gray-800 dark:from-gray-900 dark:to-gray-800 dark:text-gray-100;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
