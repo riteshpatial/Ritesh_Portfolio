@@ -74,39 +74,36 @@ export default function Portfolio() {
   const card = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } };
 
   const projects = [
-    {
-      id: "blinkit",
-      title: "Blinkit Dashboard",
-      year: "2025",
-      tags: ["Power BI", "Sales", "Delivery"],
-      short: "Interactive Power BI dashboard — sales, marketing & delivery insights.",
-      long:
-        "Blinkit Dashboard: Built interactive dashboards showing order funnels, delivery performance, and marketing KPIs. Enabled stakeholders to identify drop-off points and optimize delivery routes.",
-      visualLink:
-        "https://app.powerbi.com/view?r=eyJrIjoiYmNlNDczN2MtM2RiNi00NTUzLWExYTktZTlkODdhNWU1OWNmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=dbcc4166e1dceb044c44",
-      img:
-        "data:image/svg+xml;utf8," +
-        encodeURIComponent(
-          `<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#6366f1'/><stop offset='1' stop-color='#7c3aed'/></linearGradient></defs><rect width='100%' height='100%' fill='url(#g)' rx='12'/><g fill='rgba(255,255,255,0.9)' font-family='Arial'><text x='50%' y='48%' font-size='42' text-anchor='middle'>Blinkit Dashboard</text><text x='50%' y='58%' font-size='20' text-anchor='middle'>Project preview</text></g></svg>`
-        ),
-    },
-    {
-      id: "hr",
-      title: "HR Analytics",
-      year: "2024",
-      tags: ["Power BI", "Attrition", "Workforce"],
-      short: "Attrition & workforce analytics with actionable insights for HR leaders.",
-      long:
-        "HR Analytics: Created dashboards for attrition drivers, tenure cohorts, and employee lifecycle metrics. Helped HR reduce voluntary attrition by identifying at-risk segments.",
-      visualLink:
-        "https://app.powerbi.com/view?r=eyJrIjoiZmVlNmFkMmItOWRmMy00MTFjLTk5MjUtM2JmOWM0ZDNiYzVmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=5bf04c68966509bcde4b",
-      img:
-        "data:image/svg+xml;utf8," +
-        encodeURIComponent(
-          `<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'><defs><linearGradient id='g2' x1='0' x2='1'><stop offset='0' stop-color='#7c3aed'/><stop offset='1' stop-color='#4f46e5'/></linearGradient></defs><rect width='100%' height='100%' fill='url(#g2)' rx='12'/><g fill='rgba(255,255,255,0.95)' font-family='Arial'><text x='50%' y='48%' font-size='42' text-anchor='middle'>HR Analytics</text><text x='50%' y='58%' font-size='20' text-anchor='middle'>Project preview</text></g></svg>`
-        ),
-    },
-  ];
+  {
+    id: "blinkit",
+    title: "Blinkit Dashboard",
+    year: "2025",
+    tags: ["Power BI", "Sales", "Delivery"],
+    short: "Interactive Power BI dashboard — sales, marketing & delivery insights.",
+    long:
+      "Blinkit Dashboard: Built interactive dashboards showing order funnels, delivery performance, and marketing KPIs. Enabled stakeholders to identify drop-off points and optimize delivery routes.",
+    visualLink:
+      "https://app.powerbi.com/view?r=eyJrIjoiYmNlNDczN2MtM2RiNi00NTUzLWExYTktZTlkODdhNWU1OWNmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=dbcc4166e1dceb044c44",
+
+    // ✅ Updated image path from public folder
+    img: process.env.PUBLIC_URL + "/blinkit_dashboard.png",
+  },
+  {
+    id: "hr",
+    title: "HR Analytics",
+    year: "2024",
+    tags: ["Power BI", "Attrition", "Workforce"],
+    short: "Attrition & workforce analytics with actionable insights for HR leaders.",
+    long:
+      "HR Analytics: Created dashboards for attrition drivers, tenure cohorts, and employee lifecycle metrics. Helped HR reduce voluntary attrition by identifying at-risk segments.",
+    visualLink:
+      "https://app.powerbi.com/view?r=eyJrIjoiZmVlNmFkMmItOWRmMy00MTFjLTk5MjUtM2JmOWM0ZDNiYzVmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=5bf04c68966509bcde4b",
+
+    // ✅ Updated image path from public folder
+    img: process.env.PUBLIC_URL + "/hr_analytics.png",
+  },
+];
+
 
   const [modalOpen, setModalOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
@@ -180,21 +177,22 @@ export default function Portfolio() {
             Skills
           </motion.h3>
           <div className="grid skills-grid">
-            {[
-              { name: "Python", icon: "🐍", level: 92 },
-              { name: "SQL", icon: "🧮", level: 90 },
-              { name: "Power BI", icon: "📊", level: 88 },
-              { name: "Excel", icon: "📗", level: 86 },
-              { name: "EDA", icon: "📈", level: 85 },
-              { name: "Visualization", icon: "📉", level: 87 },
-              { name: "DAX", icon: "🧠", level: 84 },
-              { name: "Pandas", icon: "🐼", level: 89 },
-              { name: "Data Cleaning", icon: "🧹", level: 90 },
-              { name: "Machine Learning", icon: "🤖", level: 78 },
-            ].map((s, i) => (
-              <SkillCardWithChart key={i} {...s} />
-            ))}
-          </div>
+  {[
+    { name: "Python", icon: "/logos/python.svg", level: 92 },
+    { name: "SQL", icon: "/logos/sql.svg", level: 90 },
+    { name: "Power BI", icon: "/logos/powerbi.svg", level: 88 },
+    { name: "Excel", icon: "/logos/excel.svg", level: 86 },
+    { name: "EDA", icon: "/logos/eda.svg", level: 85 },
+    { name: "Visualization", icon: "/logos/visualization.svg", level: 87 },
+    { name: "DAX", icon: "/logos/dax.svg", level: 84 },
+    { name: "Pandas", icon: "/logos/pandas.svg", level: 89 },
+    { name: "Data Cleaning", icon: "/logos/datacleaning.svg", level: 90 },
+    { name: "Machine Learning", icon: "/logos/ml.svg", level: 78 },
+  ].map((s, i) => (
+    <SkillCardWithChart key={i} {...s} />
+  ))}
+</div>
+
         </section>
 
         {/* PROJECTS */}
@@ -212,7 +210,31 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35 }}
               >
-                <div className="project-thumb" style={{ backgroundImage: `url("${p.img}")` }} />
+                <div className="project-thumb-wrapper">
+  <div
+    className="project-thumb"
+    style={{
+      backgroundImage: `url("${p.img}")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      borderRadius: "12px",
+      width: "100%",
+      height: "200px",
+    }}
+  >
+    <div className="project-overlay">
+      <h4>{p.title}</h4>
+      <div className="tag-row">
+        {p.tags.map((t) => (
+          <span key={t} className="tag">
+            {t}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
                 <div className="project-body">
                   <div className="row-between">
                     <h4>{p.title}</h4>
