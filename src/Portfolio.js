@@ -263,13 +263,14 @@ export default function Portfolio() {
         {/* EXPERIENCE */}
         <section ref={experienceRef} data-section="experience" className="section">
           <motion.h3 variants={card} initial="hidden" whileInView="show" transition={{ duration: 0.6 }}>
-            Experience
+            Courses & Training
           </motion.h3>
           <div className="glass experience-card">
-            <strong>Data Analyst Intern — Ziion Technology, Mohali</strong>
+            <strong>Data Analyst Training – Ziion Technology, Mohali, Punjab &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;2025 – Present </strong>
             <ul className="short-list">
-              <li>Enhanced reporting efficiency by 15% with Power BI dashboards.</li>
-              <li>Delivered actionable insights across multiple departments.</li>
+              <li>Completed practical training in Data Analytics, covering SQL, Python, Power BI, and Excel.</li>
+              <li>Worked on live datasets to perform data cleaning, EDA, and dashboard creation for business insights. </li>
+              <li>Built and optimized Power BI dashboards and SQL projects to analyze sales, HR, and customer data.</li>
             </ul>
           </div>
         </section>
