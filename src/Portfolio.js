@@ -98,6 +98,20 @@ export default function Portfolio() {
         "https://app.powerbi.com/view?r=eyJrIjoiZmVlNmFkMmItOWRmMy00MTFjLTk5MjUtM2JmOWM0ZDNiYzVmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=5bf04c68966509bcde4b",
       img: process.env.PUBLIC_URL + "/hr_analytics.png",
     },
+    {
+  id: "sales_dashboard",
+  title: "Sales Analytics Dashboard",
+  year: "2025",
+  tags: ["Power BI", "Sales", "KPIs"],
+  short: "Sales performance dashboard with revenue, profit & regional insights.",
+  long:
+    "Designed a comprehensive Power BI dashboard for sales analytics, tracking KPIs such as revenue, profit, top-performing products, and regional performance. Included drill-downs and dynamic filters for deeper business insights.",
+  visualLink:
+    "https://app.powerbi.com/view?r=eyJrIjoiOGIzOTg3MGEtOTY5Yi00MjhlLTg5YWItNmJmZDExOTk1MjZhIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9",
+
+  img: process.env.PUBLIC_URL + "/sales_dashboard.png",
+},
+
   ];
 
   const [modalOpen, setModalOpen] = useState(false);
