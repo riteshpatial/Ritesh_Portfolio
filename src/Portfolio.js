@@ -74,36 +74,31 @@ export default function Portfolio() {
   const card = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } };
 
   const projects = [
-  {
-    id: "blinkit",
-    title: "Blinkit Dashboard",
-    year: "2025",
-    tags: ["Power BI", "Sales", "Delivery"],
-    short: "Interactive Power BI dashboard — sales, marketing & delivery insights.",
-    long:
-      "Blinkit Dashboard: Built interactive dashboards showing order funnels, delivery performance, and marketing KPIs. Enabled stakeholders to identify drop-off points and optimize delivery routes.",
-    visualLink:
-      "https://app.powerbi.com/view?r=eyJrIjoiYmNlNDczN2MtM2RiNi00NTUzLWExYTktZTlkODdhNWU1OWNmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=dbcc4166e1dceb044c44",
-
-    // ✅ Updated image path from public folder
-    img: process.env.PUBLIC_URL + "/blinkit_dashboard.png",
-  },
-  {
-    id: "hr",
-    title: "HR Analytics",
-    year: "2024",
-    tags: ["Power BI", "Attrition", "Workforce"],
-    short: "Attrition & workforce analytics with actionable insights for HR leaders.",
-    long:
-      "HR Analytics: Created dashboards for attrition drivers, tenure cohorts, and employee lifecycle metrics. Helped HR reduce voluntary attrition by identifying at-risk segments.",
-    visualLink:
-      "https://app.powerbi.com/view?r=eyJrIjoiZmVlNmFkMmItOWRmMy00MTFjLTk5MjUtM2JmOWM0ZDNiYzVmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=5bf04c68966509bcde4b",
-
-    // ✅ Updated image path from public folder
-    img: process.env.PUBLIC_URL + "/hr_analytics.png",
-  },
-];
-
+    {
+      id: "blinkit",
+      title: "Blinkit Dashboard",
+      year: "2025",
+      tags: ["Power BI", "Sales", "Delivery"],
+      short: "Interactive Power BI dashboard — sales, marketing & delivery insights.",
+      long:
+        "Blinkit Dashboard: Built interactive dashboards showing order funnels, delivery performance, and marketing KPIs. Enabled stakeholders to identify drop-off points and optimize delivery routes.",
+      visualLink:
+        "https://app.powerbi.com/view?r=eyJrIjoiYmNlNDczN2MtM2RiNi00NTUzLWExYTktZTlkODdhNWU1OWNmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=dbcc4166e1dceb044c44",
+      img: process.env.PUBLIC_URL + "/blinkit_dashboard.png",
+    },
+    {
+      id: "hr",
+      title: "HR Analytics",
+      year: "2024",
+      tags: ["Power BI", "Attrition", "Workforce"],
+      short: "Attrition & workforce analytics with actionable insights for HR leaders.",
+      long:
+        "HR Analytics: Created dashboards for attrition drivers, tenure cohorts, and employee lifecycle metrics. Helped HR reduce voluntary attrition by identifying at-risk segments.",
+      visualLink:
+        "https://app.powerbi.com/view?r=eyJrIjoiZmVlNmFkMmItOWRmMy00MTFjLTk5MjUtM2JmOWM0ZDNiYzVmIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=5bf04c68966509bcde4b",
+      img: process.env.PUBLIC_URL + "/hr_analytics.png",
+    },
+  ];
 
   const [modalOpen, setModalOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
@@ -176,18 +171,19 @@ export default function Portfolio() {
           <motion.h3 variants={card} initial="hidden" whileInView="show" transition={{ duration: 0.6 }}>
             Skills
           </motion.h3>
+
           <div className="grid skills-grid">
   {[
-    { name: "Python", icon: "/logos/python.svg", level: 92 },
-    { name: "SQL", icon: "/logos/sql.svg", level: 90 },
-    { name: "Power BI", icon: "/logos/powerbi.svg", level: 88 },
-    { name: "Excel", icon: "/logos/excel.svg", level: 86 },
-    { name: "EDA", icon: "/logos/eda.svg", level: 85 },
-    { name: "Visualization", icon: "/logos/visualization.svg", level: 87 },
-    { name: "DAX", icon: "/logos/dax.svg", level: 84 },
-    { name: "Pandas", icon: "/logos/pandas.svg", level: 89 },
-    { name: "Data Cleaning", icon: "/logos/datacleaning.svg", level: 90 },
-    { name: "Machine Learning", icon: "/logos/ml.svg", level: 78 },
+    { name: "Python", icon: process.env.PUBLIC_URL + "/logos/python.png", level: 92 },
+{ name: "SQL", icon: process.env.PUBLIC_URL + "/logos/sql.png", level: 70 },
+{ name: "Power BI", icon: process.env.PUBLIC_URL + "/logos/powerbi.png", level: 88 },
+{ name: "Excel", icon: process.env.PUBLIC_URL + "/logos/excel.png", level: 86 },
+{ name: "EDA", icon: process.env.PUBLIC_URL + "/logos/eda.png", level: 85 },
+{ name: "Visualization", icon: process.env.PUBLIC_URL + "/logos/visualization.png", level: 87 },
+{ name: "DAX", icon: process.env.PUBLIC_URL + "/logos/dax.png", level: 84 },
+{ name: "Pandas", icon: process.env.PUBLIC_URL + "/logos/pandas.png", level: 89 },
+{ name: "Data Cleaning", icon: process.env.PUBLIC_URL + "/logos/datacleaning.png", level: 90 },
+{ name: "Machine Learning", icon: process.env.PUBLIC_URL + "/logos/machinelearning.png", level: 78 },
   ].map((s, i) => (
     <SkillCardWithChart key={i} {...s} />
   ))}
@@ -211,30 +207,31 @@ export default function Portfolio() {
                 transition={{ duration: 0.35 }}
               >
                 <div className="project-thumb-wrapper">
-  <div
-    className="project-thumb"
-    style={{
-      backgroundImage: `url("${p.img}")`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      borderRadius: "12px",
-      width: "100%",
-      height: "200px",
-    }}
-  >
-    <div className="project-overlay">
-      <h4>{p.title}</h4>
-      <div className="tag-row">
-        {p.tags.map((t) => (
-          <span key={t} className="tag">
-            {t}
-          </span>
-        ))}
-      </div>
-    </div>
-  </div>
-</div>
+                  <div
+                    className="project-thumb"
+                    style={{
+                      backgroundImage: `url("${p.img}")`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      borderRadius: "12px",
+                      width: "100%",
+                      height: "200px",
+                    }}
+                  >
+                    <div className="project-overlay">
+                      <h4>{p.title}</h4>
+                      <div className="tag-row">
+                        {p.tags.map((t) => (
+                          <span key={t} className="tag">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="project-body">
                   <div className="row-between">
                     <h4>{p.title}</h4>
@@ -444,18 +441,13 @@ export default function Portfolio() {
   );
 }
 
-/* === SkillCardWithChart Component ===
-   - shows a small donut when the skill icon is clicked
-   - auto-fades after 2s (as requested)
-   - does NOT remove/modify any other code or nav behavior
-*/
+/* === SkillCardWithChart Component === */
 function SkillCardWithChart({ name, icon, level = 80 }) {
   const [showChart, setShowChart] = useState(false);
 
   useEffect(() => {
     let t;
     if (showChart) {
-      // auto hide after 2 seconds for smooth UX
       t = setTimeout(() => setShowChart(false), 2000);
     }
     return () => clearTimeout(t);
@@ -490,13 +482,33 @@ function SkillCardWithChart({ name, icon, level = 80 }) {
       whileInView={{ opacity: 1, y: 0 }}
       style={{ position: "relative", cursor: "pointer" }}
     >
-      <div className="skill-icon" aria-hidden>
-        {icon}
-      </div>
+      <div
+  style={{
+    width: "46px",
+    height: "46px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "10px",
+    overflow: "hidden",
+  }}
+>
+  <img
+    src={icon}
+    alt={name}
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "contain",
+      objectPosition: "center",
+    }}
+  />
+</div>
+
+
 
       <div className="skill-name">{name}</div>
 
-      {/* overlay small donut + percent that appears centered above the card (transparent div) */}
       {showChart && (
         <motion.div
           className="skill-chart-overlay"
@@ -515,7 +527,7 @@ function SkillCardWithChart({ name, icon, level = 80 }) {
           }}
         >
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-            <div style={{ width: 72, height: 72, position: "relative" }}>
+            <div style={{ width: 52, height: 52, position: "relative" }}>
               <Doughnut data={data} options={options} />
               <div
                 style={{
@@ -534,7 +546,7 @@ function SkillCardWithChart({ name, icon, level = 80 }) {
             </div>
 
             <div style={{ color: "#fff", textAlign: "left", minWidth: 140 }}>
-              <div style={{ fontWeight: 700, marginBottom: 4 }}>{name}</div>
+              <div style={{ fontWeight: 500, marginBottom: 4 }}>{name}</div>
               <div style={{ fontSize: 12, opacity: 0.9 }}>{`Proficiency ${level}%`}</div>
             </div>
           </div>
