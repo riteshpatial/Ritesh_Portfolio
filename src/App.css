@@ -400,3 +400,37 @@ nav, header, main, section, footer {
   z-index: 99999; /* highest */
   pointer-events: none; /* Does NOT block clicks */
 }
+/* >>> Add this at the END of src/App.css <<< */
+
+/* make modal backdrop cover whole viewport and be above the navbar */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999 !important; /* huge so it sits above nav */
+  background: rgba(0,0,0,0.55);
+}
+
+/* ensure modal card is above the backdrop and interactive */
+.modal-card {
+  position: relative;
+  z-index: 100000 !important;
+  pointer-events: auto;
+}
+
+/* allow iframe inside modal to accept clicks/scroll */
+.modal-card iframe {
+  pointer-events: auto !important;
+}
+
+/* fallback: lower nav z-index while modal is open */
+.nav.modal-behind-modal {
+  z-index: 10 !important;
+}
+
+/* safety for floating background overlay so it doesn't float above modal */
+.floating-overlay { 
+  z-index: 5;
+}
