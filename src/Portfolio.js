@@ -137,6 +137,20 @@ export default function Portfolio() {
         "https://app.powerbi.com/view?r=eyJrIjoiOGIzOTg3MGEtOTY5Yi00MjhlLTg5YWItNmJmZDExOTk1MjZhIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9",
       img: process.env.PUBLIC_URL + "/sales_dashboard.png",
     },
+        {
+      id: "amazon_phones",
+      title: "Amazon Phone Analytics Dashboard",
+      year: "2025",
+      tags: ["Power BI", "Python", "Web Scraping"],
+      short:
+        "End-to-end Amazon phone analytics: web scraping in Python, cleaned in Jupyter, and visualized in Power BI.",
+      long:
+        "Built an end-to-end analytics project using real Amazon phone listings. Scraped phone data with Python in Jupyter Notebook, cleaned and filtered the dataset based on brand, price, rating and features, then exported a curated CSV into Power BI. Designed a multi-page dashboard with Overview, Best Deals, and Phone Comparison views to analyze pricing trends, spot high-value phones, and compare devices across key specs and KPIs.",
+      visualLink:
+        "https://app.powerbi.com/view?r=eyJrIjoiODFlY2NiOGEtOTlhZi00OWQ0LWE5NTktZjA3NDA1OThiNmU5IiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=76a1ac80d35b0d0a0a80",
+      img: process.env.PUBLIC_URL + "/amazone_scraped_dashboard.png",
+    },
+
   ];
 
   const [modalOpen, setModalOpen] = useState(false);

@@ -434,3 +434,50 @@ nav, header, main, section, footer {
 .floating-overlay { 
   z-index: 5;
 }
+/* 🛠 FIX Power BI modal size to match other cards */
+.powerbi-modal .modal-card {
+  width: 1050px !important;
+  height: 650px !important;
+  margin: auto !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255,255,255,0.25) !important;
+}
+
+/* 📌 Keep iframe scaled nicely inside */
+.powerbi-modal .modal-card iframe {
+  width: 100% !important;
+  height: 68% !important;    /* makes bottom text + buttons visible */
+  border: none !important;
+  object-fit: contain !important;
+}
+
+/* 🔒 Ensure close button is always visible */
+.powerbi-modal .modal-close {
+  z-index: 999999 !important;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 👉 forces 3 cards per row */
+  gap: 28px;
+  margin-top: 18px;
+  padding-top: 30px;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 per row on phone */
+  }
+}
