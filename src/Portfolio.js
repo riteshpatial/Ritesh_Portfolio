@@ -116,7 +116,7 @@ export default function Portfolio() {
     {
       id: "hr",
       title: "HR Analytics",
-      year: "2024",
+      year: "2025",
       tags: ["Power BI", "Attrition", "Workforce"],
       short: "Attrition & workforce analytics with actionable insights for HR leaders.",
       long:
@@ -139,13 +139,13 @@ export default function Portfolio() {
     },
         {
       id: "amazon_phones",
-      title: "Amazon Phone Analytics Dashboard",
+      title: "Smartphone Market Intelligence & Launch Strategy Dashboard",
       year: "2025",
       tags: ["Power BI", "Python", "Web Scraping"],
       short:
-        "End-to-end Amazon phone analytics: web scraping in Python, cleaned in Jupyter, and visualized in Power BI.",
+        "End-to-end Smartphone Market Intelligence : web scraping in Python, cleaned in Jupyter, and visualized in Power BI.",
       long:
-        "Built an end-to-end analytics project using real Amazon phone listings. Scraped phone data with Python in Jupyter Notebook, cleaned and filtered the dataset based on brand, price, rating and features, then exported a curated CSV into Power BI. Designed a multi-page dashboard with Overview, Best Deals, and Phone Comparison views to analyze pricing trends, spot high-value phones, and compare devices across key specs and KPIs.",
+        "A company-focused analytics project built to help smartphone brands plan and optimize product launches on Amazon.The dashboard provides competitive benchmarking, pricing insights, value/battery scoring, and side-by-side device comparison to identify market gaps and positioning opportunities.Designed to help companies set smarter launch prices, evaluate competitors, and align new smartphone features with real market demand.",
       visualLink:
         "https://app.powerbi.com/view?r=eyJrIjoiODFlY2NiOGEtOTlhZi00OWQ0LWE5NTktZjA3NDA1OThiNmU5IiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=76a1ac80d35b0d0a0a80",
       img: process.env.PUBLIC_URL + "/amazone_scraped_dashboard.png",
