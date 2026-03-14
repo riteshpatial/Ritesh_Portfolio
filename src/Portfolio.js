@@ -150,6 +150,19 @@ export default function Portfolio() {
         "https://app.powerbi.com/view?r=eyJrIjoiODFlY2NiOGEtOTlhZi00OWQ0LWE5NTktZjA3NDA1OThiNmU5IiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=76a1ac80d35b0d0a0a80",
       img: process.env.PUBLIC_URL + "/amazone_scraped_dashboard.png",
     },
+    {
+  id: "price_monitoring_ml",
+  title: "Automated Price Monitoring & Prediction Pipeline",
+  year: "2025",
+  tags: ["Python", "Machine Learning", "SQL", "Power BI", "Automation"],
+  short:
+    "Automated Amazon smartphone price monitoring pipeline with ML prediction and Power BI dashboards.",
+  long:
+    "Scraped and cleaned pricing data for 100+ Amazon smartphone products and structured them into CSV files and SQL tables. Built a fully automated daily pipeline using Papermill and n8n for data collection, transformation, storage, and next-day price prediction. Implemented XGBoost and Linear Regression models achieving 92% R² prediction accuracy. Integrated Telegram alerts to monitor pipeline health and failures. Connected automated outputs to live Power BI dashboards enabling continuous price tracking and competitive trend analysis.",
+  visualLink:
+    "https://app.powerbi.com/view?r=eyJrIjoiMDU1NjI1NmYtN2JjNi00MThkLTkwOGEtYmM0MTg1N2E5MGZkIiwidCI6IjQ5OWE3ZGIxLTkwODUtNGE1My05OTNkLTA0ODMyMmY0YzgxMSJ9&pageName=f66d73b06ae08cda99d1",
+  img: process.env.PUBLIC_URL + "/price_prediction_pipeline.png",
+},
 
   ];
 
@@ -351,15 +364,19 @@ export default function Portfolio() {
         {/* EXPERIENCE */}
         <section ref={experienceRef} data-section="experience" className="section">
           <motion.h3 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}>
-            Courses & Training
+            Experience
           </motion.h3>
 
           <div className="glass experience-card">
-            <strong>Data Analyst Training – Ziion Technology, Mohali (2025 – Present)</strong>
+            <strong>Data Analyst Intern
+Ziion Technology — Mohali, Punjab
+Sep 2025 – Feb 2026</strong>
             <ul className="short-list">
-              <li>Completed practical SQL, Python, Power BI and Excel training.</li>
-              <li>Worked on live datasets for cleaning, EDA and dashboarding.</li>
-              <li>Built and optimized industry-grade BI dashboards and reports.</li>
+              <li>Performed data cleaning and exploratory analysis on multiple datasets to identify trends and anomalies.</li>
+              <li>Built automated ETL workflows using Python and SQL for recurring business reports.</li>
+              <li>Wrote advanced SQL queries including joins, subqueries and window functions.</li>
+              <li>Performed feature engineering and trained basic machine learning models.</li>
+              <li>Used Pandas and Scikit-learn for data processing and predictive modeling.</li>
             </ul>
           </div>
         </section>
